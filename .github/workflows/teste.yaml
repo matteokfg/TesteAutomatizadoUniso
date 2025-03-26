@@ -23,7 +23,7 @@ jobs:
           pip install pytest-cov
       - name: install gemini
         run: |
-          pip install google-genai
+          pip install -U google.generativeai
       - name: Run pytest
         run: |
           python -m pytest -v
