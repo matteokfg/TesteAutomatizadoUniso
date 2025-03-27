@@ -1,6 +1,9 @@
 import google.generativeai as genai
-from token import ClientGenAITokenClass as Token
+from token_api import ClientGenAITokenClass as Token
+import re
 
+def valida_string():
+    None
 
 def recebe_prompt():
     None
