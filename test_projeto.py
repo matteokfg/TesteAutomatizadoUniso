@@ -2,9 +2,9 @@ import pytest
 from projeto import recebe_prompt, conecta_googlegenai, retorna_resposta, valida_string
 
 def test_valida_string():
-    assert valida_string("Faça um breve texto sobre o trigo: Tricium aestivum L", '1') == True
-    assert valida_string("Triticum aestivum L.", '2') == True
-    assert valida_string("aestivum L.", '2') == False
+    assert valida_string("Faça um breve texto sobre o trigo: Tricium aestivum L", True) == True
+    assert valida_string("Triticum aestivum L.") == True
+    assert valida_string("aestivum L.") == False
     assert valida_string(7, '1') == False
     assert valida_string(7, '2') == False
 
