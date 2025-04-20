@@ -17,7 +17,7 @@ def test_recebe_prompt():
     assert recebe_prompt({}) == (False, "Prompt com erro") 
 
 def test_conecta_googlegenai():
-    assert conecta_googlegenai("Faça um breve texto sobre a espécie de trigo: Tricium aestivum L")['returnCode'] == 200
+    assert conecta_googlegenai("Faça um breve texto sobre a espécie de trigo: Tricium aestivum L")['return_Https_Code'] == 200
 
 def test_retorna_resposta():
     assert retorna_resposta(200, 
