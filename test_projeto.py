@@ -9,7 +9,7 @@ def test_valida_string():
     assert valida_string(7, True) == False
 
 def test_recebe_prompt():
-    assert recebe_prompt("Sou um prompt") == (True, "Sou um prompt")
+    assert recebe_prompt("Faça um breve texto sobre o trigo: Tricium aestivum L") == (True, "Faça um breve texto sobre o trigo: Tricium aestivum L")
     assert recebe_prompt("") == (False, "Prompt com erro")
     assert recebe_prompt(7) == (False, "Prompt com erro")
     assert recebe_prompt(True) == (False, "Prompt com erro")

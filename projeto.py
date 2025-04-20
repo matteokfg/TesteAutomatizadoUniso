@@ -17,9 +17,9 @@ def valida_string(text, option=False):
 def recebe_prompt(texto):
     """Funcao que recebe texto, valida e retorna um booleano e um texto."""
     if valida_string(texto, True) and texto != "":
-        return True, texto
+        return (True, texto)
     else:
-        return False, "Prompt com erro"
+        return (False, "Prompt com erro")
 
 def conecta_googlegenai():
     None
