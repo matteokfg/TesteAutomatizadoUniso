@@ -11,4 +11,4 @@ def validar_prompt(context):
 
 @then("ele retorna {booleano} e {texto_resultado}")
 def verificar_resultado(context, booleano, texto_resultado):
-    assert (context.resultado_booleano, context.resultado_texto) == (bool(booleano), texto_resultado)
+    assert (context.resultado_booleano, context.resultado_texto) == (eval(booleano), texto_resultado)
