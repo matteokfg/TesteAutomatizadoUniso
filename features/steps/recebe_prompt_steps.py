@@ -5,7 +5,7 @@ from projeto import recebe_prompt
 def definir_texto(context, texto):
     context.texto = texto
 
-@when('eu recebo e verifico')
+@when('eu valido')
 def validar_prompt(context):
     context.resultado_booleano, context.resultado_texto = recebe_prompt(context.texto)
 
