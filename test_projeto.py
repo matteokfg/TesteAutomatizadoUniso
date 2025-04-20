@@ -5,8 +5,8 @@ def test_valida_string():
     assert valida_string("Faça um breve texto sobre o trigo: Tricium aestivum L", True) == True
     assert valida_string("Triticum aestivum L.") == True
     assert valida_string("aestivum L.") == False
-    assert valida_string(7, '1') == False
-    assert valida_string(7, '2') == False
+    assert valida_string(7, True) == False
+    assert valida_string(7, True) == False
 
 def test_recebe_prompt():
     assert recebe_prompt("Sou um prompt") == (True, "Sou um prompt")
