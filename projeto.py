@@ -1,7 +1,7 @@
 # import google.generativeai as genai
 from google import genai
 from google.genai import types
-from token_api import ClientGenAITokenClass as Token
+from token_api import ClientGenAITokenClass
 import re
 
 def valida_string(text, option=False):
@@ -24,9 +24,9 @@ def recebe_prompt(texto):
         return (False, "Prompt com erro")
 
 def conecta_googlegenai(prompt):
-    TOKEN = Token().token
+    TOKEN = ClientGenAITokenClass()
     # Only run this block for Gemini Developer API
-    client = genai.Client(api_key=TOKEN)
+    client = genai.Client(api_key=TOKEN.token)
     response = client.models.generate_content(
         model='gemini-2.0-flash-001', contents=prompt
     )
