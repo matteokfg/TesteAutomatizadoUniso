@@ -1,7 +1,7 @@
 from behave import given, when, then
 from projeto import recebe_prompt
 
-@given("o texto: {prompt}")
+@given("o prompt: {prompt}")
 def definir_texto(context, prompt):
     context.prompt = prompt
 
