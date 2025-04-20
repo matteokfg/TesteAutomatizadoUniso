@@ -17,7 +17,7 @@ def test_recebe_prompt():
     assert recebe_prompt({}) == (False, "Prompt com erro") 
 
 def test_conecta_googlegenai():
-    assert conecta_googlegenai("Faça um breve texto sobre a espécie de trigo: Tricium aestivum L")['return_Https_Code'] == 200
+    assert conecta_googlegenai("Faça um breve texto sobre a espécie de trigo: Tricium aestivum L")['returnCode'] == 200
 
 def test_retorna_resposta():
     assert retorna_resposta(200, 
@@ -27,4 +27,4 @@ def test_retorna_resposta():
                             "O trigo, cientificamente conhecido como aestivum L., é um cereal amplamente cultivado em todo o mundo, sendo uma das principais fontes de alimento para a humanidade. Pertencente à família das gramíneas (Poaceae), o trigo é caracterizado por suas espigas que contêm grãos ricos em carboidratos, proteínas e fibras."
                         ) == "Erro na resposta"
     assert retorna_resposta(400, "") == "Erro na resposta"
-    assert retorna_resposta(False, "Prompt com erro") == "Prompt com erro"
+    assert retorna_resposta(False, "Prompt com erro") == "Erro na resposta"

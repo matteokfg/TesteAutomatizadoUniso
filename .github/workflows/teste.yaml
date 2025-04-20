@@ -25,12 +25,12 @@ jobs:
           pip install behave
       - name: install gemini
         run: |
-          pip install -U google.generativeai
           pip install google-genai
+      - name: Run behave
+        run: |
+          python -m behave
       - name: Run pytest
         run: |
           python -m pytest -v
           python -m pytest -W ignore::DeprecationWarning --cov
-      - name: Run behave
-        run: |
-          python -m behave
+      
