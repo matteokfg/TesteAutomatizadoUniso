@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-2022, windows-latest, ubuntu-latest]
-        python-version: ["3.9", "3.12"]
+        python-version: ["3.9", "3.10", "3.12"]
     steps:
       - uses: actions/checkout@v3
       - name: set up Python
