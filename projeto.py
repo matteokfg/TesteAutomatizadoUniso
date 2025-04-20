@@ -9,10 +9,10 @@ def valida_string(text, option=False):
     else:
         regex = ".*(Triticum)+.*"
 
-    if re.match(regex, text):
-        return True
-    else:
-        return False
+    if isinstance(text, str):
+        if re.match(regex, text):
+            return True
+    return False
 
 def recebe_prompt(texto):
     """Funcao que recebe texto, valida e retorna um booleano e um texto."""
