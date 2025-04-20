@@ -1,7 +1,7 @@
 from behave import given, when, then
 from projeto import valida_string
 
-@given("o texto: \'{texto}\', e a opcao: {opcao}")
+@given("o texto: {texto}, e a opcao: {opcao}")
 def definir_valores(context, texto, opcao):
     context.texto = texto
     context.opcao = bool(opcao)
