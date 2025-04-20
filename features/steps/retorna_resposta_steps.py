@@ -12,6 +12,6 @@ def verficar(context):
     context.resultado = retorna_resposta(context.texto, context.codigo)
 
 
-@then("ele retorna {resposta}")
+@then("ele retorna o texto {resposta}")
 def verificar_resultado(context, resposta):
     assert context.resultado == resposta
