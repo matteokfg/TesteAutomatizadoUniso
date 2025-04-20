@@ -7,7 +7,9 @@ def definir_texto(context, prompt):
 
 @when('eu valido')
 def validar_prompt(context):
-    context.resultado_booleano, context.resultado_texto = recebe_prompt(context.prompt)
+    resultado_booleano, resultado_texto = recebe_prompt(context.prompt)
+    context.resultado_booleano = resultado_booleano
+    context.resultado_texto = resultado_texto
 
 @then("ele retorna {booleano} e {texto_resultado}")
 def verificar_resultado(context, booleano, texto_resultado):
