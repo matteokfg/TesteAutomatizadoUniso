@@ -9,4 +9,4 @@ Funcionalidade: Receber prompt
         Exemplos:
             | prompt                                                    | resposta                                              |
             | Faça um breve texto sobre o trigo: Tricium aestivum L     | Faça um breve texto sobre o trigo: Tricium aestivum L |
-            |                                                           | Prompt com erro                                       |
+            | ''                                                        | Prompt com erro                                       |
