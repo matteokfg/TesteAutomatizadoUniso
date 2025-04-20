@@ -13,12 +13,12 @@ Funcionalidade: Validar string
         Então ele retorna True
 
     Cenário: validar texto vazio, com opcao True
-        Dado o texto: , e a opcao: True
+        Dado o texto: '', e a opcao: True
         Quando eu verifico
         Então ele retorna False
 
     Cenário: validar texto vazio, com opcao False
-        Dado o texto: , e a opcao: False
+        Dado o texto: '', e a opcao: False
         Quando eu verifico
         Então ele retorna False
 
