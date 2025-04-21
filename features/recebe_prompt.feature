@@ -5,8 +5,8 @@ Funcionalidade: Receber prompt
     Esquema do Cenário: recebe texto
         Dado o prompt: <prompt>
         Quando eu valido
-        Então ele retorna True e <resposta>
+        Então ele retorna <booleano> e <resposta>
         Exemplos:
-            | prompt                                                    | resposta                                              |
-            | Faça um breve texto sobre o trigo: Tricium aestivum L     | Faça um breve texto sobre o trigo: Tricium aestivum L |
-            | ''                                                        | Prompt com erro                                       |
+            | prompt                                                    | booleano  | resposta                                              |
+            | Faça um breve texto sobre o trigo: Tricium aestivum L     | True      | Faça um breve texto sobre o trigo: Tricium aestivum L |
+            | ''                                                        | False     | Prompt com erro                                       |
