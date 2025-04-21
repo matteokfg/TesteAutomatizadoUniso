@@ -9,7 +9,7 @@ def definir_valor(context, texto, codigo):
 
 @when("eu recebo e verifico")
 def verficar(context):
-    context.resultado = retorna_resposta(context.texto, context.codigo)
+    context.resultado = retorna_resposta(context.codigo, context.texto)
 
 
 @then("ele retorna o texto {resposta}")
