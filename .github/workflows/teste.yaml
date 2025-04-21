@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-2022, windows-latest, ubuntu-latest]
-        python-version: ["3.9", "3.12"]
+        python-version: ["3.9", "3.10", "3.12"]
     steps:
       - uses: actions/checkout@v3
       - name: set up Python
@@ -20,10 +20,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U pytest
           pip install pytest-cov
+      - name: install behave
+        run: |
+          pip install behave
       - name: install gemini
         run: |
-          pip install -U google.generativeai
+          pip install google-genai
+      - name: Run behave
+        run: |
+          python -m behave
       - name: Run pytest
         run: |
           python -m pytest -v
           python -m pytest -W ignore::DeprecationWarning --cov
+      
